@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="sign-up">
+
+        <h1>Registration Page</h1>
+       
+           <form action="index.html" onsubmit="return clickMe()">
+             <label>Name</label><br>
+               <input type="text" name="name" id="name" ><br><br>
+               <!-- <p id="Nerror">Name cannot be empty</p> -->
+             <label>Email:</label><br>
+             <input type="text" name="email" id="email" ><br><br>
+             <label>Mobile:</label> <br>
+             <!-- <p id="Eerror">Email cannot be empty</p> -->
+               <input type="text" name="number" id="number"><br><br>
+            <label>Password:</label> <br>
+            <input type="password" name="password" id="password"><br><br>
+            <label>Confimed password</label><br>
+             <input type="password" name="cpassword" id="cpassword"><br><br><br>
+            
+               &nbsp;&nbsp; <input type="submit" name="submit" value="Sign-IN" class="signbtn" ><br><br>
+               </form>
+            
+            
+            
+         </div>
+
+
+         <script>
+
+          let name  = document.getElementById("name");
+          let email = document.getElementById("email");
+          let number = document.getElementById("number");
+          let password = document.getElementById("password");
+          let cpassword = document.getElementById("cpassword");
+
+          let flag =false;
+          // let b = name.innerHTML;
+          // console.log(b);
+
+          // console.log(name.value);
+
+          function clickMe(){
+           
+            if(name.value == ""){
+
+                flag =false;
+              alert("name caonnot be empty");
+              
+            }else if(name.value.length<3){
+
+                
+              alert("name caonnot less than 3 character");
+            }else if(email.value==""){
+
+
+              alert("Email caonnot be empty");
+            }else if(email.value.length<8){
+
+            alert("email cannot be less than 8 character");
+
+            }else if(number.value==""){
+
+             alert("Number cannot be empty");
+
+             }else if(number.value.length<10){
+             
+             alert("Number cannot be less than 10 character");
+             
+             }
+            else if(password.value==""){
+
+             alert("password cannot be empty");
+             }
+             else if(password.value.length<8){
+
+             alert("Password cannot be less than 8 character");
+             }else if(password.value !== cpassword.value){
+
+              alert("Password not match");
+
+             }
+
+             else if(cpassword.value==""){
+
+                 alert("Confiremed password cannot be empty");
+
+             }
+             else if(cpassword.value.length<8){
+             
+             alert("Confirermed cannot be less than 8 character");
+
+             }
+             else{
+
+                flag = true;
+                alert("registration sucessfull");
+             }
+
+
+
+            
+          
+
+            return flag;
+           
+
+            
+
+
+
+
+          }
+
+            
+
+
+          
+          function login(){
+                alert('Registration sucessfull');
+                
+             }
+
+         </script>
+         
+         
+
+         
+         <style>
+
+
+
+            #sign-up{
+              width: 100%;
+              border: 1px solid black;
+              
+              height: 800px;
+              
+            }
+            #sign-up h1{
+              margin-top: 50px;
+              margin-left: 40%;
+              margin-bottom: 30px;
+              width: 20%;
+              padding: 20px;
+              padding-left: 4%;
+              border-radius: 10px;
+              background-color: lawngreen;
+            }
+            
+            #sign-up form{
+              margin-left: 30%;
+              width:40%;
+              height: 500px;
+             padding: 20px;
+              border: 1px solid lightgrey;
+              border-radius: 20px;
+            
+            }
+            #sign-up input{
+              width: 80%;
+            margin-left: 10%;
+              padding: 10px;
+              border-radius: 5px;
+              font-size: 15px;
+            }
+            
+            #sign-up label{
+              margin-left: 10%;
+              font-size: 20px;
+            } 
+            
+            #pbtn{
+              margin-left: 35%;
+            }
+            
+            .signbtn{
+              background: rebeccapurple;
+              padding: 20px;
+             color: #fff;
+              
+              font-size: 30px;
+            }
+                 </style>
+
+
+<!-- validation -->
+
+
+<!-- 
+         <?php
+
+//include('connection.php');
+$host = "localhost";
+$username="root";
+$pass="";
+$dbname="ecart";
+
+
+//create connection
+
+$conn=mysqli_connect($host,$username,$pass,$dbname);
+
+if(!$conn){
+    die("Connection failed:".mysqli_connect_error());
+}
+echo "database connectes sucessfully";
+
+
+// $name=$email=$number=$password=$cpassword="";
+
+// if(isset($_POST['submit'])){
+ 
+    
+//     $name=$_POST['name'];
+//     $email=$_POST['email'];
+//     $number=$_POST['number'];
+    
+//     $password=$_POST['password'];
+//     $cpassword=$_POST['cpassword'];
+
+
+// }
+
+
+
+
+
+// //cheaking connection
+
+
+// // insert data in database
+
+// $sql = "INSERT INTO userinfo(Name,Email,Mobile,Password,Cpassword)VALUES('$name','$email','$number','$password','$cpassword')";
+
+
+
+// (mysqli_query($conn,$sql));
+
+// // header("location:Ecart2.php");
+
+
+// mysqli_close($conn);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// $host='localhost';
+// $username="root";
+// $pass="";
+// $dbname="form";
+
+
+
+// $conn= mysqli_connect($host,$username,$pass,$dbname);
+
+
+
+// $name=$email=$number="";
+
+
+// if (isset($_POST['submit'])) {
+    
+//     $name = $_POST['name'];
+//     echo "$name<br>";
+
+//     $email = $_POST['email'];
+//     echo "$email<br>";
+
+//     $number= $_POST['number'];
+//     echo "$number<br>";
+//     echo "data submitted sucessfully";
+   
+// }
+
+
+
+
+
+
+
+// if(!$conn){
+//     die("connection failed" .mysqli_connect_error());
+// }
+
+// $sql= "INSERT INTO reg5 (Name,Email,Mobile)VALUES('$name','$email','$number')";
+
+// (mysqli_query($conn,$sql));
+
+// mysqli_close($conn);
+
+
+?> -->
+
+</body>
+</html>
