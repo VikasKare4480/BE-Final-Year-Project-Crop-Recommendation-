@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>National Kisan Portal</title>
+    <style>
+        body {
+            background-color: #3e3636;
+            margin: 0;
+            padding: 0;
+            height: 850px;
+        }
+
+        .home2 {
+            max-width: 2000px;
+        }
+
+        .mid-section {
+            border: 0.1px solid rgb(83, 69, 69);
+            width: 100%;
+            height: 850px;
+            
+            background-repeat: no-repeat;
+            background-size: 2000px 850px;
+        }
+
+        .mid-section h1 {
+            font-size: 80px;
+            font-weight: 1000;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin-left: 20%;
+            margin-top: 150px;
+            color: white;
+        }
+
+        .mid-section span {
+            color: rgb(32, 128, 32);
+        }
+
+        .mid-section #btn {
+            width: 30%;
+            margin-left: 17%;
+        }
+
+        .mid-section button {
+            background-color: transparent;
+            font-size: 30px;
+            border-radius: 35px;
+            padding-left: 30px;
+            padding-right: 30px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border: 2px solid rgb(8, 248, 148);
+            color: white;
+            margin-left: 50px;
+        }
+
+        .mid-section button:hover {
+            background-color: rgb(113, 215, 113);
+            text-decoration: none;
+        }
+
+        .mid-section button a {
+            text-decoration: none;
+            color: white;
+        }
+
+        .header span {
+            color: rgb(50, 224, 50);
+        }
+
+        .header a:hover {
+            color: rgb(50, 224, 50);
+            text-decoration: none;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 120px;
+            background-color: white;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header a {
+            text-decoration: none;
+            color: black;
+            margin-top: 25px;
+        }
+
+        .home2 .header h1 {
+            margin-left: 15%;
+            margin-top: 30px;
+        }
+
+        .home2 .header li {
+            float: left;
+            display: flex;
+            justify-content: space-between;
+            font-size: 20px;
+            margin-left: 30px;
+            font-weight: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class='home2'>
+        <div id="home-main">
+
+            <div class="header">
+                <h1><a href="#">National<span> Kisan </span>Portal</a></h1>
+
+                <div>
+                    <ul>
+                        <li><a href="#">Pest</a></li>
+                        <li><a href="#">Fertilizer</a></li>
+                        <li><a href="#">Weather</a></li>
+                        <li><a href="#">Crop</a></li>
+                        <li><a href="#">Market</a></li>
+                        <Link to="/mail"><li><a>Contact</a></li></Link>
+                        <Link to="/profile"><li><a>Profile</a></li></Link>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mid-section">
+
+                <h1>India with <span>53% Population</span><br/>Involved in Agriculture Sector</h1>
+
+                <div id="btn">
+                   <button><a href="signup.hbs">sign-up</a></button>
+                    <button><a href="login.hbs">Login</a></button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>

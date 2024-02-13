@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .login-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .login {
+            background-color: #fff;
+            width: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        h3 {
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class='login-main'>
+        <div class='login'>
+            <div id="sign-up" class="login1">
+                <h1>Login Form</h1>
+                <form action="/login" method="post">
+                    <label for="email">email:</label>
+                    <input type="text" name="email">
+
+                    <label for="password">password:</label>
+                    <input type="password" name="password">
+
+                    <input type="submit" name="submit" class="signbtn" id="lbtn">
+
+                    {{#if error}}
+                    <p style="color: red; text-align: center;">{{error}}</p>
+                    {{/if}}
+
+                </form>
+                <h3><a href="./signup.hbs">Make a new Account</a></h3>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

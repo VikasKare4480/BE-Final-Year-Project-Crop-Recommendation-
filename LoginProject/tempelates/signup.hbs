@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Page</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        .sign-up {
+            background-color: #fff;
+            width: 412px; /* Adjusted width */
+            height: 915px; /* Adjusted height */
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #555;
+        }
+
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+
+        input[type="submit"] {
+            background-color: #007bff;
+            color: #fff;
+            cursor: pointer;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        input[type="file"] {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="sign-up">
+        <h1>Registration Page</h1>
+        <form action="/signup" method="post" enctype="multipart/form-data">
+            <label for="name">Name:</label>
+            <input type="text" name="name" id="name" placeholder="Enter your name">
+
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" placeholder="Enter your email">
+
+            <label for="number">Mobile:</label>
+            <input type="text" name="mobile" id="number" placeholder="Enter your mobile number">
+
+            <label for="password">Password:</label>
+            <input type="password" name="password" placeholder="Enter your password">
+
+            <label for="cpassword">Confirmed password:</label>
+            <input type="password" name="cpassword" placeholder="Confirm your password">
+
+            <label for="image">Upload image of farmer:</label>
+            <input type='file' name="fimg">
+
+            <label for="file1">Upload 7/12:</label>
+            <input type='file' name="seventimg">
+
+            <label for="file2">Upload 8/A:</label>
+            <input type='file' name="eightAimg">
+
+            <input type="submit" name="submit" class="signbtn">
+        </form>
+    </div>
+
+</body>
+
+</html>
+
+

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Data</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+         table.user-table {
+        width: 100%;
+        border-collapse: collapse;
+    }
+    
+    table.user-table th,
+    table.user-table td {
+        border: 1px solid #ccc;
+        padding: 8px;
+    }
+    
+    /* Media query for smaller screens (e.g., mobile devices) */
+    @media screen and (max-width: 767px) {
+        table.user-table {
+            display: block; /* Change the table to a block */
+            width: 100%;
+        }
+
+        table.user-table th {
+            display: none; /* Hide table header on smaller screens */
+        }
+
+        table.user-table td {
+            display: block;
+            width: 100%;
+            text-align: left; /* Align text to the left for better readability */
+            padding: 16px; /* Increase padding for mobile rows */
+            /* You can also adjust font-size or other properties to increase row size */
+        }
+    }
+
+        header,
+        footer {
+            /* Your header and footer styles */
+        }
+
+        .admin-data {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .user-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .user-table th,
+        .user-table td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .user-table th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        .user-table td {
+            word-break: break-word;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <!-- Navigation or header content if needed -->
+    </header>
+
+    <main class="admin-data">
+        <h1>User Info</h1>
+        <table class="user-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Mobile</th>
+                    <th>Password</th>
+                    <th>Confirmed Password</th>
+                    <th>Farmer Image</th>
+                    <th>7/12 Image</th>
+                    <th>8A Image</th>
+                    <!-- Add more headers if needed -->
+                </tr>
+            </thead>
+           
+             <tbody>
+                {{#if users}}
+                    {{#each users}}
+                        <tr>
+                            <td>{{name}}</td>
+                            <td>{{email}}</td>
+                            <td>{{mobile}}</td>
+                            <td>{{password}}</td>
+                            <td>{{cpassword}}</td>
+                            <td><img src="{{fimg}}"  style="width: 100px; height: auto;"></td>
+                            <td><img src="{{seventimg}}" style="width: 100px; height: auto;"></td>
+                            <td><img src="{{eightAimg}}"  style="width: 100px; height: auto;"></td>
+                            <!-- Add more cells for additional user details -->
+                        </tr>
+                    {{/each}}
+                {{else}}
+                    <tr>
+                        <td colspan="8">No data available</td>
+                    </tr>
+                {{/if}}
+            </tbody>
+
+        </table>
+    </main>
+
+    <footer>
+        <!-- Footer content if needed -->
+    </footer>
+</body>
+</html>
